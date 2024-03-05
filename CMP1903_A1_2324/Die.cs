@@ -1,15 +1,17 @@
 ﻿using System;
 
-namespace CMP1903_A1_2324
-{
-    internal class Die
-    {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
-
-        //Property
-        //Method
+namespace CMP1903_A1_2324 {
+  internal class Die {
+    /// <summary>
+    /// Simple 6-sided Die class.
+    /// </summary>
+    public int Value {
+      get { return _value; } } // Public access property for encapsulation. No need for a setter.
+    static Random _random = new Random(); // Instantiates a Random property to produce the random value.
+    private int _value = 1; // Private encapsulated integer value.
+    public int Roll() { // Public Roll() method that returns the result as an int. Result is also stored in the Value property.
+      Value = _random.Next(1, 7); // Calls the method Next() to get a random int from 1 to 6 and assigns the it to the Value property.
+      return Value; // Returns the value assigned to Value.
     }
+  }
 }
