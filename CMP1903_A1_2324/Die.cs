@@ -6,7 +6,8 @@ namespace CMP1903_A1_2324 {
     /// Simple 6-sided Die class.
     /// </summary>
     public int Value {
-      get { return _value; } } // Public access property for encapsulation. No need for a setter.
+      get { return _value; }
+      set { _value = value; } } // Public access property for encapsulation.
     static Random _random = new Random(); // Instantiates a Random property to produce the random value.
     private int _value = 1; // Private encapsulated integer value.
     public int Roll() { // Public Roll() method that returns the result as an int. Result is also stored in the Value property.
