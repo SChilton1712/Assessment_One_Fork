@@ -9,7 +9,7 @@ namespace CMP1903_A1_2324 {
       Game newGame = new Game(); // Instantiates the Game object.
       for (int index = 0; index < 100; index++) { // Starts a loop that runs 100 times to ensure tests are sufficient.
         (int, int, int, int) gameValues = newGame.RollDice(); // Declares an int tuple to store the results from the rolls, and gets the values for it from a call to the RollDice() method.
-        (bool, bool, bool, bool) checks = CheckAllValues(GameValues); // Declares a bool tuple to store the results from the checks, and gets those results from the CheckAllValues() method. GameValues is passed as an argument.
+        (bool, bool, bool, bool) checks = CheckAllValues(gameValues); // Declares a bool tuple to store the results from the checks, and gets those results from the CheckAllValues() method. GameValues is passed as an argument.
         // Calls Debug.Assert() with each of the Checks values, and outputs error messages if any of them are false.
         Debug.Assert(checks.Item1, $"Error: the first dice roll returned a value of {gameValues.Item1}!");
         Debug.Assert(checks.Item2, $"Error: the second dice roll returned a value of {gameValues.Item2}!");
